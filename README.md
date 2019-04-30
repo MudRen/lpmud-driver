@@ -1,7 +1,47 @@
-## lpmud-driver
+## lpmud-driver - [fluffos](https://github.com/fluffos/fluffos)
 
-CYGWIN 下编译需要安装以下包
-  
+### 文件说明
+ - [config.ini](config.ini) - 运行时配置文件 utf-8 版
+ - [local_options](local_options) - fluffos v2019 配置文件
+ - [local_options.h](local_options.h) - fluffos v2017 配置文件
+ - [local_options.README](local_options.README) - fluffos v2017 配置文件注释版
+
+### 编译说明
+
+不管是 v2017 还是 v2019，编译配置文件都为 `src` 下面的 `local_options` 文件，请根据需要修改（非特别需求，推荐使用默认配置）。
+```
+$ git clone https://github.com/fluffos/fluffos.git
+$ cd fluffos
+$ git checkout v2019 (or v2017)
+```
+
+#### v2017编译指令
+```
+$ cd src
+$ ./build.FluffOS
+$ make
+$ make install
+```
+编译好的驱动在 `bin` 目录中。
+
+#### v2019编译指令
+```
+$ mkdir build && cd build
+$ cmake ..
+$ make
+```
+编译好的驱动在 `build/src` 目录中。
+
+注意，如果不需要某个包，请使用类似以下指令编译：
+
+> cmake -DPACKAGE_DB=OFF ..
+
+默认编译为动态编译,仅针对当前CPU优化，如果需要静态编译，请使用以下指令编译：
+
+> cmake -DMARCH_NATIVE=OFF -DSTATIC=ON ..
+
+CYGWIN 下编译需要安装以下包：
+
 - autoconf
 - automake
 - binutils
