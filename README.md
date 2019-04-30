@@ -36,11 +36,12 @@ $ make
 
 > cmake -DPACKAGE_DB=OFF ..
 
-默认编译为动态编译,仅针对当前CPU优化，如果需要静态编译，请使用以下指令编译：
+默认编译为动态编译，仅针对当前CPU优化，如果需要静态编译，请使用以下指令编译：
 
 > cmake -DMARCH_NATIVE=OFF -DSTATIC=ON ..
 
-CYGWIN 下编译需要安装以下包：
+#### CYGWIN 编译说明
+CYGWIN 下编译需要安装以下包，编译方式和其它系统一样。
 
 - autoconf
 - automake
