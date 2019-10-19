@@ -76,6 +76,7 @@ CYGWIN 下编译需要安装以下包，编译方式和其它系统一样。目�
 - cmake
 - gcc-core
 - gcc-g++
+- git
 - libcrypt-devel
 - libevent-devel
 - libiconv-devel
