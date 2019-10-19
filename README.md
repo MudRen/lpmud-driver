@@ -12,7 +12,7 @@
 编译前请执行以下指令安装必要的包。
 
 ```
-$ sudo apt install libjemalloc-dev bison zlib1g-dev libssl-dev libmysqlclient-dev libpcre3-dev libevent-dev cmake cargo -y
+$ sudo apt install libjemalloc-dev bison zlib1g-dev libssl-dev libmysqlclient-dev libpcre3-dev libevent-dev cmake cargo autoconf automake -y
 ```
 
 ### 编译说明
