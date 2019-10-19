@@ -62,6 +62,9 @@ $ cargo build -vvv
 ```
 编译好的驱动程序在 `target/debug` 目录中，包括 `fluffos` 和 `libdriver.so` 二个文件。
 
+注意，如果不需要某个包，请修改对应包的 `src/packages/XXX/CMakeLists.txt` 文件中的 `ON` 为 `OFF` 。
+
+
 #### CYGWIN 编译说明
 
 CYGWIN 下编译需要安装以下包，编译方式和其它系统一样。目前CYGWIN下编译2019版本仅支持 cmake 编译方式，不支持最新版。
