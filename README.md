@@ -81,7 +81,6 @@ CYGWIN 下编译需要安装以下包，编译方式和其它系统一样。目�
 - libevent-devel
 - libiconv-devel
 - libicu-devel
-- libmariadb-devel
 - libmysqlclient-devel
 - libpcre-devel
 - make
