@@ -47,7 +47,6 @@
 #undef USE_ICONV
 #undef IPV6
 #undef DTRACE
-#define OPCPROF
 
 /****************************************************************************
  *                              PACKAGES                                    *
