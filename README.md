@@ -12,7 +12,7 @@
 编译前请执行以下指令安装必要的包。
 
 ```
-$ sudo apt install libjemalloc-dev bison zlib1g-dev libssl-dev libmysqlclient-dev libpcre3-dev libevent-dev cmake cargo autoconf automake -y
+$ sudo apt install libjemalloc-dev bison zlib1g-dev libssl-dev libmysqlclient-dev libpcre3-dev libevent-dev cmake autoconf automake -y
 ```
 
 ### 编译说明
@@ -37,15 +37,13 @@ $ make install
 
 #### v2019编译指令
 
-**2019 年 10 月以前的版本，请用 `cmake` 编译**：
-
 ```
-$ git reset --hard c8f24e89b3f4d6df77d9bf0bab4aa6c66ce041c2
 $ mkdir build && cd build
 $ cmake ..
 $ make
+$ make install
 ```
-编译好的驱动程序 `driver` 在 `build/src` 目录中。
+编译好的驱动程序 `driver` 在 `build/bin` 目录中。
 
 注意，如果不需要某个包，请使用类似以下指令编译：
 
@@ -55,19 +53,9 @@ $ make
 
 > cmake -DMARCH_NATIVE=OFF -DSTATIC=ON ..
 
-**最新版本请用 `cargo` 编译**：
-
-```
-$ cargo build -vvv
-```
-编译好的驱动程序在 `target/debug` 目录中，包括 `fluffos` 和 `libdriver.so` 二个文件。
-
-注意，如果不需要某个包，请修改对应包的 `src/packages/XXX/CMakeLists.txt` 文件中的 `ON` 为 `OFF` 。
-
-
 #### CYGWIN 编译说明
 
-CYGWIN 下编译需要安装以下包，编译方式和其它系统一样。目前CYGWIN下编译2019版本仅支持 cmake 编译方式，不支持最新版。
+CYGWIN 下编译需要安装以下包，编译方式和其它系统一样。
 
 - autoconf
 - automake
