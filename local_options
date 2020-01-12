@@ -37,21 +37,32 @@
 /****************************************************************************
  *                           MISCELLANEOUS                                  *
  ****************************************************************************/
-#define CUSTOM_CRYPT
 #undef COMPAT_32
 #define DEFAULT_PRAGMAS PRAGMA_WARNINGS + PRAGMA_SAVE_TYPES + PRAGMA_ERROR_CONTEXT + PRAGMA_OPTIMIZE
 #define SAVE_EXTENSION ".o"
-#define SAVE_GZ_EXTENSION ".o.gz"
-#undef PRIVS
+#define PRIVS
 #undef NO_SHADOWS
 #undef USE_ICONV
 #undef IPV6
-#undef DTRACE
 
 /****************************************************************************
  *                              PACKAGES                                    *
  ****************************************************************************/
 
-// PACKAGES are moved to CMAKE, please don't try to add #define PACKAGE_* here.
+// PACKAGES are moved to CMAKE options, please don't try to add #define PACKAGE_* here.
+
+/****************************************************************************
+ *                              PACKAGES CONFIGS                            *
+ ****************************************************************************/
+
+// configs for PACKAGE_COMPRESS
+#define SAVE_GZ_EXTENSION ".o.gz"
+
+// configs for PACKAGE_UIDS
+#define AUTO_SETEUID
+#undef AUTO_TRUST_BACKBONE
+
+// configs for PACKAGE_PARSE
+#define PARSE_DEBUG /* Only take effect in DEBUG build */
 
 #endif /* _LOCAL_OPTIONS_H_ */
