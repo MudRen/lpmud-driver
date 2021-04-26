@@ -1,9 +1,11 @@
-## lpmud-driver - [fluffos](https://github.com/fluffos/fluffos)
+## lpmud-driver 运行时配置文件
+
+[fluffos](https://github.com/fluffos/fluffos) 和 mudos 运行时配置文件。
 
 ### 文件说明
 
  - [v2019.cfg](v2019.cfg) - 运行时配置文件 utf-8 版，fluffos v2019 专用
- - [v2017.cfg](v2017.cfg) - 运行时配置文件 GBK 版，旧版驱动和 fluffos v2017 使用
+ - [v2017.cfg](v2017.cfg) - 运行时配置文件 GBK 版，旧版驱动 mudos 和 fluffos v2017 使用
  - [local_options](local_options) - fluffos v2019 配置文件
  - [local_options.h](local_options.h) - fluffos v2017 配置文件
  - [local_options.README](local_options.README) - fluffos v2017 配置文件注释版
@@ -11,6 +13,8 @@
 ### 编译说明
 
 最新版编译指南请点这里：[FluffOS在windows和ubuntu/centos/mac系统下的编译](https://bbs.mud.ren/threads/2)
+
+----
 
 不管是 v2017 还是 v2019，编译配置文件都为 `src` 下面的 `local_options` 文件，请根据需要修改（非特别需求，推荐使用默认配置）。
 
@@ -44,7 +48,7 @@ $ make install
 ```
 $ mkdir build && cd build
 $ cmake ..
-$ make install
+$ make -j4 install
 ```
 编译好的驱动程序 `driver` 在 `build/bin` 目录中。
 
