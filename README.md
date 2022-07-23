@@ -5,6 +5,7 @@
 ### 文件说明
 
  - [v2019.cfg](v2019.cfg) - 运行时配置文件 utf-8 版，fluffos v2019 专用
+ - [v2019.mini.cfg](v2019.mini.cfg) - 运行时配置文件 utf-8 精简版，fluffos v2019 专用
  - [v2017.cfg](v2017.cfg) - 运行时配置文件 GBK 版，旧版驱动 mudos 和 fluffos v2017 使用
  - [local_options](local_options) - fluffos v2019 配置文件
  - [local_options.h](local_options.h) - fluffos v2017 配置文件
